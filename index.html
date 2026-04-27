@@ -889,6 +889,69 @@
                 margin-bottom: 64px !important;
             }
         }
+        /* Base SVG styling */
+        svg {
+          width: 18px;
+          height: 18px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        
+        /* Buttons with icons */
+        .btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+        }
+        
+        /* SVG inside buttons */
+        .btn svg {
+          width: 18px;
+          height: 18px;
+          flex-shrink: 0;
+        }
+        
+        /* Primary button (dark / gradient) */
+        .btn-black svg,
+        .btn-primary svg {
+          stroke: white;
+          fill: none;
+        }
+        
+        /* Secondary / light button */
+        .btn-white svg {
+          stroke: currentColor;
+          fill: none;
+        }
+        
+        /* GitHub icon (filled icon) */
+        .btn svg[fill="currentColor"],
+        a svg[fill="currentColor"] {
+          fill: currentColor;
+          stroke: none;
+        }
+        
+        /* Links (like footer / inline links) */
+        a {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+        }
+        
+        a svg {
+          width: 16px;
+          height: 16px;
+          opacity: 0.9;
+        }
+        
+        /* Hover polish */
+        .btn:hover svg,
+        a:hover svg {
+          opacity: 1;
+          transform: translateY(-1px);
+          transition: all 0.2s ease;
+        }
     </style>
 </head>
 <body>
